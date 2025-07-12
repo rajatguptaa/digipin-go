@@ -9,7 +9,7 @@ A comprehensive Go library and CLI for encoding and decoding Indian geographic c
 - **Batch Processing:** Encode/decode multiple coordinates or pins at once (sequential and concurrent)
 - **LRU Caching:** Fast repeated lookups
 - **Geospatial Utilities:** Distance, nearest, order by distance
-- **Grid Generation:** Create offline coordinate grids (CSV)
+- **Grid Generation:** Create offline coordinate grids (CSV or JSON)
 - **CLI Tool:** Command-line interface for all major features
 - **Modular Go Package:** Clean, idiomatic, and production-ready
 
@@ -61,8 +61,11 @@ pins, errs := digipin.BatchEncode(coords)
 km, _ := digipin.GetDistance("39J-438-TJC7", "4FK-595-8823")
 nearest, _ := digipin.FindNearest("39J-438-TJC7", []string{"4FK-595-8823", "4PJ-766-C924"})
 
-// Grid generation
+// Grid generation (CSV)
 err := digipin.GenerateGrid(20, 70, 21, 71, 0.1, "grid.csv")
+
+// Grid generation (JSON)
+err := digipin.GenerateGridJSON(20, 70, 21, 71, 0.1, "grid.json")
 ```
 
 ## 🧪 Examples & Tests
