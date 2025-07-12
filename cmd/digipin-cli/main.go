@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	digipin "github.com/rajatgupta/digipin-go/digipin"
+	digipin "github.com/rajatguptaa/digipin-go/digipin"
 )
 
 func main() {
